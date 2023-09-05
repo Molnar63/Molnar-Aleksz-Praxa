@@ -3,6 +3,11 @@
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
+ul {
+  list-style: none;
+  text-align: left;
+}
+
 .header {
   color: #fff;
 }
@@ -16,9 +21,17 @@
 .navbar {
   display: flex;
   background-color: #b90101;
-  justify-content: center; /* Center the items horizontally */
-  align-items: center; /* Center the items vertically */
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
+}
+.pdf::before {
+  content: url("../images/Frame.png");
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: inline-block;
 }
 
 .navbar a {
@@ -49,11 +62,12 @@
 
 .background {
   background: url("../images//image14.png") center center/cover no-repeat;
-  height: 100vh;
-  width: 100%;
+  height: 90vh;
+  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
 }
 .textblock {
   position: absolute;
@@ -64,6 +78,7 @@
   padding-bottom: 30px;
   width: 300px;
   left: 0;
+  max-width: 100%;
 }
 .textblock h1 {
   color: #ffffff;
@@ -81,16 +96,23 @@
   color: #f5f5f5;
   padding: 13px 25px;
 }
-main {
+.dryage img {
+  max-width: 100%;
+  height: auto;
+}
+.dryage p {
+  margin: 30px;
+}
+
+.main-first {
   justify-content: center;
   align-items: center;
   display: flex;
   flex-direction: row;
   padding-left: 20px;
-  padding: 30px;
 }
-main div {
-  margin-right: 25px;
+.main-first-div {
+  margin: 25px;
 }
 .dryagetext {
   padding-top: 30px;
@@ -121,10 +143,14 @@ main div {
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
+  max-width: 100%;
+  height: auto;
 }
 
 .thumbnail {
-  max-width: 170px;
+  width: 170px;
+  height: auto;
+  max-width: 100%;
   cursor: pointer;
 }
 
@@ -167,9 +193,6 @@ main div {
   padding-right: 50px;
   padding-bottom: 30px;
 }
-.handwerk {
-  width: 450px;
-}
 
 .spices-right {
   color: #f5f5f5;
@@ -183,4 +206,49 @@ main div {
   background-image: url("../images/spices.svg");
   background-size: cover;
   background-position: center;
+}
+.fleisch {
+  background: url("../images/fleisch.svg") center center/cover no-repeat;
+  height: 60vh;
+  width: auto;
+  background-color: #000;
+  color: #f5f5f5;
+  padding: 13px 25px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.small {
+  color: #a3a3a3;
+}
+
+footer {
+  background-color: #aa0202;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+.footer-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: #6d0000; /* Darker color */
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+}
+.footer-line-text {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.footer-line-text-div {
+  margin-inline: 200px;
+}
+.footer-line-text-div2 {
+  margin-inline: 10px;
 }
