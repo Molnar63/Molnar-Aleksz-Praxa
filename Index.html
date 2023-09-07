@@ -10,42 +10,74 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+      integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o="
+      crossorigin="anonymous"
+    />
     <title>Molnar Aleksz Praxa</title>
   </head>
   <body>
-    <a href="">
-      <img class="logo" src="images/logo.svg" />
-    </a>
-    <div class="navbar">
-      <a href="">Die Metzgerei</a>
-      <a href="">Dry Aged</a>
-      <a href="">Fleischversand</a>
-      <a href="">Events/Kurse</a>
-      <a href="">Partyservice</a>
-      <a href="">Tagesessen</a>
-      <a href="">Impressum</a>
-      <a href="">Kontakt</a>
-      <a href="" class="pdf">download</a>
-    </div>
-
+    <nav>
+      <div class="logo"><img src="images/logo.svg" /></div>
+      <div class="openMenu"><i class="fa fa-bars"></i></div>
+      <ul class="mainMenu">
+        <li><a href="">Die Metzgerei</a></li>
+        <li><a href="">Dry Aged</a></li>
+        <li><a href="">Fleischversand</a></li>
+        <li><a href="">Events/Kurse</a></li>
+        <li><a href="">Partyservice</a></li>
+        <li><a href="">Tagesessen</a></li>
+        <li><a href="">Impressum</a></li>
+        <li><a href="">Kontakt</a></li>
+        <div class="closeMenu"><i class="fa fa-times"></i></div>
+        <li>
+          <a href="" class="pdf">download</a>
+        </li>
+      </ul>
+    </nav>
+    <script src="./navbar.js"></script>
     <div class="header2">
       <p>
-        <img src="images/clock.svg" /><b>Opentime: </b> Di. - Fr.: 07:00-13:00
-        und 15:00-18:30. Sa.: 07:30 - 12:30
+        <img class="inserted-img" src="images/clock.svg" /><b>Opentime: </b> Di.
+        - Fr.: 07:00-13:00 und 15:00-18:30. Sa.: 07:30 - 12:30
       </p>
     </div>
-    <div class="textblock">
-      <h1>Heiko Brath Metzgermeister</h1>
-      <br />
-      <p>
-        Deutsches Ipsum Dolor deserunt dissentias Grimms Märchen et. Tollit
-        argumentum ius an. Pfannkuchen lobortis elaboraret per ne, nam Aperol
-        Spritz probatus pertinax.
-      </p>
+
+    <div class="banner0">
+      <div class="background">
+        <img src="images/image14.png" />
+      </div>
+      <div class="textblock">
+        <h1>Heiko Brath Metzgermeister</h1>
+        <br />
+        <p>
+          Deutsches Ipsum Dolor deserunt dissentias Grimms Märchen et. Tollit
+          argumentum ius an. Pfannkuchen lobortis elaboraret per ne, nam Aperol
+          Spritz probatus pertinax.
+        </p>
+      </div>
     </div>
-    <div class="background">
-      <img src="images/image14.png" />
+
+    <div id="modelbox">
+      <img src="./images/buchen.svg" width="100%" />
+      <div class="offer-text">
+        <h2>Get 15% OFF</h2>
+        <small>on all products</small>
+        <p>Don't miss this great deal!</p>
+        <form>
+          <input type="email" placeholder="Email Address" /><br />
+          <button type="submit" class="redbutton">Send</button>
+        </form>
+      </div>
+      <img
+        src="./images/x-solid.svg"
+        onclick="closeModel()"
+        class="close-icon"
+      />
     </div>
+    <script src="./popup.js"></script>
 
     <div class="black-block">
       <main class="main-first">
@@ -80,7 +112,7 @@
     </div>
     <div class="split-container">
       <div class="left-side">
-        <div>
+        <div class="buchentext">
           <h1>
             Buchen Sie den <br /><br />
             Grillkurs jetzt
@@ -128,7 +160,7 @@
       </div>
     </div>
     <div class="split-container">
-      <div class="spices-left"></div>
+      <div class="spices-left"><img src="./images/spices.svg" /></div>
       <div class="spices-right">
         <div class="buchentext">
           <h1>Custome spices for your meat</h1>
@@ -154,9 +186,11 @@
     </div>
     <div class="black-block">
       <main class="main-first">
-        <div class="main-first-div"><img src="./images/genussnetz.png" /></div>
         <div class="main-first-div">
-          <h2 style="text-align: left">
+          <img class="inserted-img" src="./images/genussnetz.png" />
+        </div>
+        <div class="main-first-div">
+          <h2 class="left-h2">
             Metzgerei Brath ist Mitglied<br />im Genussnetzwerk
           </h2>
           <br />
@@ -167,33 +201,35 @@
       <div class="center-text">
         <img class="inserted-img" src="./images/vonal 1.png" />
         <br /><br />
+
         <main class="main-first">
-          <div><h2>Auszeichnungen</h2></div>
-          <div class="main-first-div">
-            <img class="inserted-img" src="./images/nagrada1.png" /><br /><small
-              class="small"
-              >Tollit argumentum<br />genau Saepe lobortis</small
-            >
-          </div>
-          <div class="main-first-div">
-            <img class="inserted-img" src="./images/nagrada2.png" /><br /><small
-              class="small"
-              >Schneewittchen<br />denique</small
-            >
-          </div>
-          <div class="main-first-div">
-            <img class="inserted-img" src="./images/nagrada3.png" /><br /><small
-              class="small"
-              >Grimms Märchen<br />expetenda</small
-            >
-          </div>
-          <div class="main-first-div">
-            <img class="inserted-img" src="./images/nagrada4.png" /><br /><small
-              class="small"
-              >Mettwurst mei<br />ullum gloriatur.</small
-            >
+          <div class="main-second-div">
+            <h2>Auszeichnungen</h2>
+            <div class="main-first-div">
+              <img class="inserted-img" src="./images/nagrada1.png" />
+              <br />
+              <small class="small"
+                >Tollit argumentum<br />genau Saepe lobortis</small
+              >
+            </div>
+            <div class="main-first-div">
+              <img class="inserted-img" src="./images/nagrada2.png" />
+              <br />
+              <small class="small">Schneewittchen<br />denique</small>
+            </div>
+            <div class="main-first-div">
+              <img class="inserted-img" src="./images/nagrada3.png" />
+              <br />
+              <small class="small">Grimms Märchen<br />expetenda</small>
+            </div>
+            <div class="main-first-div">
+              <img class="inserted-img" src="./images/nagrada4.png" />
+              <br />
+              <small class="small">Mettwurst mei<br />ullum gloriatur.</small>
+            </div>
           </div>
         </main>
+
         <br /><br />
         <img class="inserted-img" src="./images/vonal 1.png" />
         <br /><br />
@@ -208,20 +244,28 @@
     <footer>
       <main class="footer-line-text">
         <div class="footer-line-text-div2">
-          <img src="./images/icons.png" />
-        </div>
-        <div class="footer-line-text-div2">
           <ul>
-            <li>Klauprechtstraße 25</li>
+            <li>
+              <img class="icons" src="./images/location-dot-solid.svg" />
+              Klauprechtstraße 25
+            </li>
             <li>76137 Karlsruhe, Germany</li>
-            <li>+49 721 358060</li>
-            <li>info@partyservice-brath.de</li>
+            <li>
+              <img class="icons" src="./images/phone-solid.svg" /> +49 721
+              358060
+            </li>
+            <li>
+              <img class="icons" src="./images/envelope-regular.svg" />
+              info@partyservice-brath.de
+            </li>
           </ul>
         </div>
-        <div class="footer-line-text-div"><img src="./images/logo.svg" /></div>
+        <div class="footer-line-text-div">
+          <img class="inserted-img" src="./images/logo.svg" />
+        </div>
         <div class="footer-line-text-div2">Besuchen Sie uns auf:</div>
         <div class="footer-line-text-div2">
-          <img src="./images/insta.png" />
+          <img class="inserted-img" src="./images/insta.png" />
         </div>
       </main>
     </footer>

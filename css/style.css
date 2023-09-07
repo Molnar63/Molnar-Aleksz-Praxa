@@ -7,23 +7,103 @@ ul {
   list-style: none;
   text-align: left;
 }
-.logo {
-  left: 4%;
-  position: absolute;
+
+#modelbox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  max-width: 350px;
+  background: #292929b2;
+  overflow: hidden;
+  border: 1px solid #ff3a3ae6;
+  border-radius: 25px;
+  display: none;
 }
+.offer-text {
+  color: #fff;
+  text-align: center;
+  padding: 20px 40px 40px 40px;
+  font-size: 14px;
+  line-height: 22px;
+}
+.offer-text h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.offer-text small {
+  display: inline-block;
+  color: #ff2b4e;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.offer-text form {
+  text-align: center;
+  margin-top: 30px;
+}
+.offer-text form input {
+  border: 1px solid #ff3a3ae6;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  background: #525252b8;
+}
+.close-icon {
+  background: #292929b2;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
 .inserted-img {
   max-width: 100%;
   width: auto;
 }
 
-.navbar {
+nav {
   display: flex;
   background-color: #b90101;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+  padding: 15px;
 }
-.pdf::before {
+nav .mainMenu {
+  display: flex;
+  list-style: none;
+}
+nav .mainMenu li a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+nav .logo {
+  cursor: pointer;
+  position: absolute;
+  left: 5%;
+  top: 10px;
+}
+nav .openMenu {
+  font-size: 2rem;
+  margin: 20px;
+  cursor: pointer;
+  display: none;
+}
+nav .mainMenu .closeMenu {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+
+nav .pdf::before {
   content: url("../images/Frame.png");
   top: 0;
   left: 0;
@@ -32,14 +112,7 @@ ul {
   display: inline-block;
 }
 
-.navbar a {
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.navbar a:hover {
+nav a:hover {
   background: #810101;
   color: #ffffff;
 }
@@ -48,6 +121,7 @@ ul {
   background-color: #1f1f1f;
 }
 .header2 p {
+  display: inline;
   display: flex;
   justify-content: flex-end;
   text-align: right;
@@ -91,14 +165,25 @@ ul {
   width: 350px;
 }
 .main-first {
-  justify-content: center;
-  align-items: center;
   display: flex;
-  flex-direction: row;
-  padding-left: 20px;
+  justify-content: center; /* Középre igazítás vízszintesen */
+  align-items: center;
 }
 .main-first-div {
   margin: 25px;
+}
+.main-second {
+  justify-content: center;
+  align-items: center;
+  justify-content: row;
+}
+.main-second-div {
+  margin: 25px;
+  display: flex;
+  flex-direction: row; /* Sorba rendezzük az elemeket */
+  justify-content: center; /* Középre igazítás vízszintesen az elemek között */
+  align-items: center;
+  text-align: center; /* Szövegek középre igazítása */
 }
 
 .redbutton {
@@ -152,7 +237,6 @@ ul {
   flex-wrap: wrap;
   flex: 1;
   color: #f5f5f5;
-  padding: 100px;
   background-color: #b90101;
 }
 .right-side {
@@ -162,7 +246,7 @@ ul {
 }
 .right-side img {
   width: 100%;
-  height: auto; /* Maintain aspect ratio */
+  height: 100%;
 }
 
 .white-button {
@@ -181,10 +265,11 @@ ul {
 .buchentext {
   background-color: #b90101;
   color: #f5f5f5;
-  margin: 250px;
+  margin: 150px;
 }
 
 .spices-right {
+  flex-wrap: wrap;
   color: #f5f5f5;
   padding: 13px 25px;
   flex: 1;
@@ -193,9 +278,12 @@ ul {
 
 .spices-left {
   flex: 1;
-  background-image: url("../images/spices.svg");
-  background-size: cover;
-  background-position: center;
+  display: flex;
+  align-items: center;
+}
+.spices-left img {
+  width: 100%;
+  height: 100%; /* Maintain aspect ratio */
 }
 .fleisch {
   background: url("../images/fleisch.svg") center center/cover no-repeat;
@@ -225,10 +313,12 @@ footer {
   flex-direction: row;
 }
 .footer-line-text-div {
-  margin-inline: 200px;
+  margin-inline: 100px;
 }
 .footer-line-text-div2 {
-  margin-inline: 10px;
+  margin-inline: 20px;
+
+  padding: 20px;
 }
 .footer-line {
   position: relative;
@@ -255,16 +345,21 @@ footer {
   transform: translateY(-50%);
   padding-right: 30px;
 }
+.icons {
+  max-width: 15px;
+}
+.left-h2 {
+  text-align: left;
+}
+
 @media (max-width: 1024px) {
   .thumbnails {
-    background-color: green;
     flex-wrap: wrap;
   }
   .thumbnails {
     flex: 50%;
   }
   .main-first {
-    background-color: green;
     flex-wrap: wrap;
   }
   .main-first-div {
@@ -273,17 +368,149 @@ footer {
   .split-container {
     flex-direction: column; /* Change layout to a column for mobile */
   }
+  .main-second-div {
+    flex-direction: column; /* Mobil nézetben is sorba rendezzük az elemeket */
+    flex: 50%;
+  }
+  .main-first-div {
+    margin: 10px; /* Kisebb margók a mobil nézetben */
+    text-align: center; /* Szövegek középre igazítása mobil nézetben */
+    flex-basis: 50%; /* Az elemek 50%-nyi szélességet foglalnak el a mobil nézetben, így 2x2 alakzat jön létre */
+    flex: 50%;
+  }
+  .footer {
+    flex-direction: column;
+  }
+  .icons {
+    display: none;
+  }
+  .footer-line {
+    flex-direction: column;
+    padding: 40px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
 
-  .left-side {
-    order: 2; /* Change the order to make it appear above */
+  .footer-line-text {
+    flex-direction: column;
   }
-  .right-side {
-    order: 1;
+  .left-text {
+    position: unset;
+    padding-left: 0px;
   }
-  .spices-left {
-    order: 1;
+  .right-text {
+    position: unset;
+    padding-right: 0px;
   }
-  .spices-right {
-    order: 2;
+  .left-h2 {
+    text-align: center;
+  }
+  .buchentext {
+    margin: 40px;
+  }
+  .textblock {
+    background-color: #000;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-left: auto;
+    width: auto;
+    max-width: 100%;
+    padding: 60px;
+    left: auto;
+  }
+  nav {
+    justify-content: right;
+    text-align: right;
+    right: 0;
+    align-items: right;
+  }
+  nav .mainMenu {
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(128, 7, 7);
+    transition: top 1s ease 0s;
+    display: none;
+  }
+  nav .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  nav .mainMenu li {
+    padding: 15px;
+  }
+  nav .openMenu {
+    display: block;
+  }
+  nav .mainMenu li a:hover {
+    background: rgb(37, 37, 37);
+    color: rgb(173, 173, 173);
+  }
+  .header2 img {
+    display: none;
+  }
+  .header2 p {
+    padding-top: 80px;
+    display: block;
+    text-align: right;
+  }
+  nav .logo {
+    top: 0;
+  }
+  .dryagetext {
+    text-align: center;
+  }
+}
+@media (max-width: 1660px) {
+  ul {
+    text-align: center;
+  }
+  .buchentext {
+    margin: 10px;
+    text-align: center;
+  }
+  .thumbnails {
+    flex-wrap: wrap;
+  }
+  .thumbnails {
+    flex: 25%;
+  }
+  .textblock {
+    background-color: #000;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-left: auto;
+    width: auto;
+    max-width: 100%;
+    padding: 60px;
+    left: auto;
+  }
+  nav {
+    justify-content: right;
+    text-align: right;
+    right: 0;
+    align-items: right;
+  }
+  nav .logo {
+    left: 5px;
+  }
+  ul {
+    text-align: center;
+  }
+  footer ul {
+    text-align: left;
   }
 }
