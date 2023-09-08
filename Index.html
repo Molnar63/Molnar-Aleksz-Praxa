@@ -16,12 +16,22 @@
       integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o="
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
     <title>Molnar Aleksz Praxa</title>
   </head>
   <body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <nav>
       <div class="logo"><img src="images/logo.svg" /></div>
+      <a href="" class="pdf" style="color: #fff; text-decoration: none"
+        >download</a
+      >
       <div class="openMenu"><i class="fa fa-bars"></i></div>
+
       <ul class="mainMenu">
         <li><a href="">Die Metzgerei</a></li>
         <li><a href="">Dry Aged</a></li>
@@ -31,10 +41,8 @@
         <li><a href="">Tagesessen</a></li>
         <li><a href="">Impressum</a></li>
         <li><a href="">Kontakt</a></li>
+        <li><img src="./images/moon.png" id="modeicon" /></li>
         <div class="closeMenu"><i class="fa fa-times"></i></div>
-        <li>
-          <a href="" class="pdf">download</a>
-        </li>
       </ul>
     </nav>
     <script src="./navbar.js"></script>
@@ -45,10 +53,30 @@
       </p>
     </div>
 
-    <div class="banner0">
+    <script src="./mode.js"></script>
+
+    <div class="banner">
       <div class="background">
-        <img src="images/image14.png" />
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="images/image14.png" /></div>
+            <div class="swiper-slide"><img src="images/bg1.jpg" /></div>
+            <div class="swiper-slide"><img src="images/bg2.jpg" /></div>
+            <div class="swiper-slide"><img src="images/bg3.jpg" /></div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
       </div>
+      <script src="./swiper.js"></script>
+      </script>
       <div class="textblock">
         <h1>Heiko Brath Metzgermeister</h1>
         <br />
@@ -243,7 +271,7 @@
     <div class="black-block"></div>
     <footer>
       <main class="footer-line-text">
-        <div class="footer-line-text-div2">
+        <div class="footer-line-text-div">
           <ul>
             <li>
               <img class="icons" src="./images/location-dot-solid.svg" />
@@ -263,7 +291,7 @@
         <div class="footer-line-text-div">
           <img class="inserted-img" src="./images/logo.svg" />
         </div>
-        <div class="footer-line-text-div2">Besuchen Sie uns auf:</div>
+        <div class="footer-line-text-div">Besuchen Sie uns auf:</div>
         <div class="footer-line-text-div2">
           <img class="inserted-img" src="./images/insta.png" />
         </div>

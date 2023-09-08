@@ -9,7 +9,7 @@ function showPopup() {
 
 showPopup();
 
-setInterval(showPopup, 30000);
+setInterval(showPopup, 300000);
 
 function closeModel() {
   modelbox.style.display = "none";

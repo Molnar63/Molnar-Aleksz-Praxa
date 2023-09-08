@@ -8,6 +8,46 @@ ul {
   text-align: left;
 }
 
+.swiper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+  background-size: cover;
+  box-sizing: border-box;
+}
+.swiper-slide {
+  box-sizing: border-box;
+  margin-bottom: 0; /* Ez eltávolítja a margin alulról */
+  bottom: 0;
+}
+.swiper-slide img {
+  height: 100%;
+}
+.swiper-wrapper {
+  box-sizing: border-box;
+}
+
+#modeicon {
+  width: 25px;
+  cursor: pointer;
+}
+:root {
+  --primary-color: #1f1f1f;
+  --secondary-color: #000;
+  --third-color: #b90101;
+  --fourth-color: #6d0000;
+  --text-color: #fff;
+  --small-color: #a3a3a3;
+}
+.bright-theme {
+  --primary-color: #aeaeae;
+  --secondary-color: #d6d5d5;
+  --text-color: #000;
+  --small-color: #565656;
+}
+
 #modelbox {
   position: fixed;
   top: 50%;
@@ -86,6 +126,7 @@ nav .mainMenu li a {
   text-decoration: none;
 }
 nav .logo {
+  z-index: 2;
   cursor: pointer;
   position: absolute;
   left: 5%;
@@ -111,6 +152,11 @@ nav .pdf::before {
   right: 0;
   display: inline-block;
 }
+.pdf-text {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
 nav a:hover {
   background: #810101;
@@ -118,14 +164,14 @@ nav a:hover {
 }
 
 .header2 {
-  background-color: #1f1f1f;
+  background-color: var(--primary-color);
 }
 .header2 p {
   display: inline;
   display: flex;
   justify-content: flex-end;
   text-align: right;
-  color: #f5f5f5;
+  color: var(--text-color);
   padding: 13px 25px;
   text-decoration: none;
 }
@@ -140,6 +186,7 @@ nav a:hover {
   height: auto;
 }
 .textblock {
+  z-index: 1;
   position: absolute;
   background-color: #0c0c0c57;
   padding: 100px;
@@ -151,11 +198,11 @@ nav a:hover {
 }
 
 .black-block {
-  background-color: #000;
+  background-color: var(--secondary-color);
   height: auto;
   justify-content: center;
   align-items: center;
-  color: #f5f5f5;
+  color: var(--text-color);
   padding: 13px 25px;
 }
 .center-text {
@@ -237,7 +284,7 @@ nav a:hover {
   flex-wrap: wrap;
   flex: 1;
   color: #f5f5f5;
-  background-color: #b90101;
+  background-color: var(--third-color);
 }
 .right-side {
   flex: 1;
@@ -263,9 +310,10 @@ nav a:hover {
   cursor: pointer;
 }
 .buchentext {
-  background-color: #b90101;
+  background-color: var(--third-color);
   color: #f5f5f5;
   margin: 150px;
+  padding-left: 150px;
 }
 
 .spices-right {
@@ -273,7 +321,7 @@ nav a:hover {
   color: #f5f5f5;
   padding: 13px 25px;
   flex: 1;
-  background-color: #b90101;
+  background-color: var(--third-color);
 }
 
 .spices-left {
@@ -288,7 +336,7 @@ nav a:hover {
 .fleisch {
   background: url("../images/fleisch.svg") center center/cover no-repeat;
   width: auto;
-  background-color: #000;
+  background-color: var(--secondary-color);
   color: #f5f5f5;
   padding: 150px;
   display: flex;
@@ -297,11 +345,11 @@ nav a:hover {
   align-items: center;
 }
 .small {
-  color: #a3a3a3;
+  color: var(--small-color);
 }
 
 footer {
-  background-color: #aa0202;
+  background-color: var(--third-color);
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -320,11 +368,12 @@ footer {
 
   padding: 20px;
 }
+
 .footer-line {
   position: relative;
   left: 0;
 
-  background-color: #6d0000; /* Darker color */
+  background-color: var(--fourth-color);
   color: #fff;
   padding: 10px;
   bottom: 0;
@@ -410,7 +459,7 @@ footer {
     margin: 40px;
   }
   .textblock {
-    background-color: #000;
+    background-color: var(--secondary-color);
     position: relative;
     text-align: center;
     justify-content: center;
@@ -420,6 +469,7 @@ footer {
     max-width: 100%;
     padding: 60px;
     left: auto;
+    color: var(--text-color);
   }
   nav {
     justify-content: right;
@@ -472,20 +522,7 @@ footer {
     text-align: center;
   }
 }
-@media (max-width: 1660px) {
-  ul {
-    text-align: center;
-  }
-  .buchentext {
-    margin: 10px;
-    text-align: center;
-  }
-  .thumbnails {
-    flex-wrap: wrap;
-  }
-  .thumbnails {
-    flex: 25%;
-  }
+/*@media (max-width: 1400px) {
   .textblock {
     background-color: #000;
     position: relative;
@@ -497,6 +534,43 @@ footer {
     max-width: 100%;
     padding: 60px;
     left: auto;
+  }
+}*/
+
+@media (max-width: 1660px) {
+  ul {
+    text-align: center;
+  }
+  .buchentext {
+    padding-left: 0px;
+    margin: 10px;
+    text-align: center;
+  }
+  .thumbnails {
+    flex-wrap: wrap;
+  }
+  .thumbnails {
+    flex: 25%;
+  }
+  .textblock {
+    background-color: var(--secondary-color);
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-left: auto;
+    width: auto;
+    max-width: 100%;
+    padding: 60px;
+    left: auto;
+    color: var(--text-color);
+
+    /* position: absolute;
+    background-color: #0c0c0c57;
+    padding-left: 250px;
+    max-width: 250px;
+    left: 0;
+    color: #ffffff;*/
   }
   nav {
     justify-content: right;
