@@ -3,6 +3,13 @@
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
+body {
+  background-image: url("../images/fleisch.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
 ul {
   list-style: none;
   text-align: left;
@@ -10,16 +17,17 @@ ul {
 
 .swiper {
   flex: 1;
-  display: flex;
-  align-items: center;
+  display: flex !important;
   flex-wrap: wrap;
   height: 100%;
   background-size: cover;
   box-sizing: border-box;
+  position: relative;
 }
 .swiper-slide {
+  display: flex !important;
   box-sizing: border-box;
-  margin-bottom: 0; /* Ez eltávolítja a margin alulról */
+  margin-bottom: 0;
   bottom: 0;
 }
 .swiper-slide img {
@@ -27,6 +35,24 @@ ul {
 }
 .swiper-wrapper {
   box-sizing: border-box;
+}
+.swiper-btn {
+  position: absolute !important;
+  margin: 45% !important;
+  margin-top: 15% !important;
+  height: 25px !important;
+  width: 25px !important;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0);
+}
+.swiper-btn::after,
+.swiper-btn::before {
+  color: #fff;
+  font-size: 20px !important;
+}
+.swiper-pagination-bullet {
+  background-color: #b90101 !important;
 }
 
 #modeicon {
@@ -49,6 +75,7 @@ ul {
 }
 
 #modelbox {
+  z-index: 2;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -129,6 +156,8 @@ nav .logo {
   z-index: 2;
   cursor: pointer;
   position: absolute;
+  display: flex;
+  align-items: center;
   left: 5%;
   top: 10px;
 }
@@ -146,16 +175,12 @@ nav .mainMenu .closeMenu {
 
 nav .pdf::before {
   content: url("../images/Frame.png");
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  display: inline-block;
 }
-.pdf-text {
+.pdf {
+  display: flex;
   color: white;
-  padding: 14px 16px;
   text-decoration: none;
+  padding: 14px 16px;
 }
 
 nav a:hover {
@@ -215,6 +240,7 @@ nav a:hover {
   display: flex;
   justify-content: center; /* Középre igazítás vízszintesen */
   align-items: center;
+  flex-direction: row;
 }
 .main-first-div {
   margin: 25px;
@@ -246,8 +272,17 @@ nav a:hover {
   cursor: pointer;
 }
 
-.gallery {
+.ausz-block {
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+}
+.ausz-text {
   text-align: center;
+}
+
+.gallery {
   margin: 20px;
 }
 
@@ -258,6 +293,8 @@ nav a:hover {
 
 .thumbnails {
   display: flex;
+  text-align: center;
+  align-items: center;
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
@@ -334,10 +371,7 @@ nav a:hover {
   height: 100%; /* Maintain aspect ratio */
 }
 .fleisch {
-  background: url("../images/fleisch.svg") center center/cover no-repeat;
   width: auto;
-  background-color: var(--secondary-color);
-  color: #f5f5f5;
   padding: 150px;
   display: flex;
   flex-direction: column;
@@ -353,47 +387,41 @@ footer {
   color: #fff;
   padding: 20px;
   text-align: center;
-}
-.footer-line-text {
-  justify-content: center;
-  align-items: center;
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
 }
-.footer-line-text-div {
-  margin-inline: 100px;
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
-.footer-line-text-div2 {
-  margin-inline: 20px;
 
-  padding: 20px;
+.footer-logo {
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
 }
 
 .footer-line {
   position: relative;
-  left: 0;
+  display: flex;
 
+  justify-content: space-between;
   background-color: var(--fourth-color);
   color: #fff;
   padding: 10px;
   bottom: 0;
 }
 
-.left-text {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  padding-left: 30px;
-}
-
-.right-text {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  padding-right: 30px;
-}
 .icons {
   max-width: 15px;
 }
@@ -401,64 +429,50 @@ footer {
   text-align: left;
 }
 
-@media (max-width: 1024px) {
-  .thumbnails {
-    flex-wrap: wrap;
-  }
-  .thumbnails {
-    flex: 50%;
-  }
-  .main-first {
-    flex-wrap: wrap;
-  }
-  .main-first-div {
-    flex: 25%;
-  }
-  .split-container {
-    flex-direction: column; /* Change layout to a column for mobile */
-  }
-  .main-second-div {
-    flex-direction: column; /* Mobil nézetben is sorba rendezzük az elemeket */
-    flex: 50%;
-  }
-  .main-first-div {
-    margin: 10px; /* Kisebb margók a mobil nézetben */
-    text-align: center; /* Szövegek középre igazítása mobil nézetben */
-    flex-basis: 50%; /* Az elemek 50%-nyi szélességet foglalnak el a mobil nézetben, így 2x2 alakzat jön létre */
-    flex: 50%;
-  }
-  .footer {
-    flex-direction: column;
-  }
-  .icons {
-    display: none;
-  }
-  .footer-line {
-    flex-direction: column;
-    padding: 40px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
+.gray-container {
+  display: flex;
+  justify-content: space-between;
+}
 
-  .footer-line-text {
-    flex-direction: column;
+.gray-box {
+  text-align: center;
+  align-items: center;
+  width: 20%;
+  background-color: #ccc;
+  padding: 20px;
+  margin: 10px;
+}
+@media (max-width: 1660px) {
+  .swiper-btn {
+    position: absolute !important;
+    margin: 40% !important;
+    margin-top: 15% !important;
+    height: 25px !important;
+    width: 25px !important;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 0);
   }
-  .left-text {
-    position: unset;
-    padding-left: 0px;
+  .swiper-btn::after,
+  .swiper-btn::before {
+    color: #fff;
+    font-size: 20px !important;
   }
-  .right-text {
-    position: unset;
-    padding-right: 0px;
-  }
-  .left-h2 {
+  ul {
     text-align: center;
   }
   .buchentext {
-    margin: 40px;
+    padding-left: 0px;
+    margin: 10px;
+    text-align: center;
   }
-  .textblock {
+  .thumbnails {
+    flex-wrap: wrap;
+  }
+  .thumbnails {
+    flex: 25%;
+  }
+  /*.textblock {
     background-color: var(--secondary-color);
     position: relative;
     text-align: center;
@@ -470,7 +484,53 @@ footer {
     padding: 60px;
     left: auto;
     color: var(--text-color);
+    
+  }*/
+
+  /* position: absolute;
+    background-color: #0c0c0c57;
+    padding-left: 250px;
+    max-width: 250px;
+    left: 0;
+    color: #ffffff;*/
+
+  nav {
+    justify-content: right;
+    text-align: right;
+    right: 0;
+    align-items: right;
   }
+  nav .logo {
+    left: 5px;
+  }
+  ul {
+    text-align: center;
+  }
+  footer ul {
+    text-align: left;
+  }
+}
+
+@media (max-width: 1400px) {
+  .ausz-block {
+    flex-direction: column;
+  }
+  .textblock {
+    z-index: 1;
+    background-color: #0c0c0c57;
+    padding: 50px;
+    padding-left: 200px;
+    max-width: 200px;
+    top: 15%;
+    left: 0;
+    color: #ffffff;
+  }
+  .swiper-btn {
+    margin: 42% !important;
+    margin-top: 15% !important;
+  }
+}
+@media (max-width: 1250px) {
   nav {
     justify-content: right;
     text-align: right;
@@ -507,50 +567,62 @@ footer {
     background: rgb(37, 37, 37);
     color: rgb(173, 173, 173);
   }
-  .header2 img {
-    display: none;
-  }
-  .header2 p {
-    padding-top: 80px;
-    display: block;
-    text-align: right;
-  }
-  nav .logo {
-    top: 0;
-  }
-  .dryagetext {
-    text-align: center;
-  }
 }
-/*@media (max-width: 1400px) {
-  .textblock {
-    background-color: #000;
-    position: relative;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    padding-left: auto;
-    width: auto;
-    max-width: 100%;
-    padding: 60px;
-    left: auto;
-  }
-}*/
 
-@media (max-width: 1660px) {
-  ul {
-    text-align: center;
+@media (max-width: 1024px) {
+  .swiper-btn {
+    display: none !important;
   }
-  .buchentext {
-    padding-left: 0px;
-    margin: 10px;
-    text-align: center;
+  .swiper-pagination-bullet {
+    display: none !important;
   }
+
   .thumbnails {
     flex-wrap: wrap;
   }
   .thumbnails {
-    flex: 25%;
+    flex: 50%;
+  }
+  .main-first {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    flex: 50%;
+  }
+  .split-container {
+    flex-direction: column; /* Change layout to a column for mobile */
+  }
+  .main-second-div {
+    flex-direction: column; /* Mobil nézetben is sorba rendezzük az elemeket */
+    flex: 50%;
+  }
+  .main-first-div {
+    flex-wrap: wrap;
+    flex: 50%;
+  }
+  footer {
+    padding: 20px;
+    flex-direction: column;
+  }
+  .footer-social {
+    flex-direction: column;
+  }
+  .icons {
+    display: none;
+  }
+  .footer-line {
+    flex-direction: column;
+    padding: 40px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .left-h2 {
+    text-align: center;
+  }
+  .buchentext {
+    margin: 40px;
   }
   .textblock {
     background-color: var(--secondary-color);
@@ -564,27 +636,20 @@ footer {
     padding: 60px;
     left: auto;
     color: var(--text-color);
-
-    /* position: absolute;
-    background-color: #0c0c0c57;
-    padding-left: 250px;
-    max-width: 250px;
-    left: 0;
-    color: #ffffff;*/
   }
-  nav {
-    justify-content: right;
-    text-align: right;
-    right: 0;
-    align-items: right;
-  }
-  nav .logo {
-    left: 5px;
-  }
-  ul {
+  .dryagetext {
     text-align: center;
   }
-  footer ul {
-    text-align: left;
+
+  .header2 img {
+    display: none;
+  }
+  .header2 p {
+    padding-top: 80px;
+    display: block;
+    text-align: right;
+  }
+  nav .logo {
+    top: 0;
   }
 }

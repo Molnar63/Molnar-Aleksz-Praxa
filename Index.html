@@ -27,9 +27,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <nav>
       <div class="logo"><img src="images/logo.svg" /></div>
-      <a href="" class="pdf" style="color: #fff; text-decoration: none"
-        >download</a
-      >
+      <a href="" class="pdf">download</a>
       <div class="openMenu"><i class="fa fa-bars"></i></div>
 
       <ul class="mainMenu">
@@ -71,8 +69,8 @@
           <div class="swiper-pagination"></div>
 
           <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev swiper-btn"></div>
+          <div class="swiper-button-next swiper-btn"></div>
         </div>
       </div>
       <script src="./swiper.js"></script>
@@ -178,12 +176,13 @@
         <button class="redbutton">Das Handwerk</button>
         <br /><br />
         <img class="inserted-img" src="./images/vonal 1.png" />
-        <div class="gallery"></div>
+        <div class="gallery">
         <div class="thumbnails">
           <img class="thumbnail" src="./images/wurst.png" alt="Thumbnail 1" />
           <img class="thumbnail" src="./images/hanchen.png" alt="Thumbnail 2" />
           <img class="thumbnail" src="./images/schwein.png" alt="Thumbnail 3" />
           <img class="thumbnail" src="./images/rind.png" alt="Thumbnail r" />
+        </div>
         </div>
       </div>
     </div>
@@ -207,11 +206,13 @@
         </div>
       </div>
     </div>
-    <div class="fleisch">
+    <div class="fleisch" id="parallax">
       <h1>Fleischversand</h1>
       <br />
       <button class="white-button">Jetzt bestellen</button>
     </div>
+    <script src="parallaxjs.js"></script>
+
     <div class="black-block">
       <main class="main-first">
         <div class="main-first-div">
@@ -230,33 +231,25 @@
         <img class="inserted-img" src="./images/vonal 1.png" />
         <br /><br />
 
-        <main class="main-first">
-          <div class="main-second-div">
-            <h2>Auszeichnungen</h2>
-            <div class="main-first-div">
-              <img class="inserted-img" src="./images/nagrada1.png" />
-              <br />
+        <div class="ausz-block"><div class="ausz-text"><h2>Auszeichnungen</h2></div>
+        <div class="gallery">
+          <div class="thumbnails">
+            <div class="thumbnail"><img class="inserted-img" src="./images/nagrada1.png" />  <br />
               <small class="small"
                 >Tollit argumentum<br />genau Saepe lobortis</small
-              >
-            </div>
-            <div class="main-first-div">
-              <img class="inserted-img" src="./images/nagrada2.png" />
+              ></div>
+            <div class="thumbnail"><img class="inserted-img" src="./images/nagrada2.png" />
               <br />
-              <small class="small">Schneewittchen<br />denique</small>
-            </div>
-            <div class="main-first-div">
-              <img class="inserted-img" src="./images/nagrada3.png" />
-              <br />
+              <small class="small">Schneewittchen<br />denique</small></div>
+            <div class="thumbnail"><img class="inserted-img" src="./images/nagrada3.png" /> <br />
               <small class="small">Grimms Märchen<br />expetenda</small>
             </div>
-            <div class="main-first-div">
-              <img class="inserted-img" src="./images/nagrada4.png" />
-              <br />
+            <div class="thumbnail"><img class="inserted-img" src="./images/nagrada4.png" /> <br />
               <small class="small">Mettwurst mei<br />ullum gloriatur.</small>
             </div>
           </div>
-        </main>
+          </div>
+        </div>
 
         <br /><br />
         <img class="inserted-img" src="./images/vonal 1.png" />
@@ -268,40 +261,44 @@
         <button class="redbutton">Das Handwerk</button>
       </div>
     </div>
-    <div class="black-block"></div>
+    <div class="black-block">  <div class="gray-container">
+      <div class="gray-box">
+          <p>Sprechen Sie deutsch aliquip ex ea commodo consequat. Wiener Schnitzel aute irure dolor in reprehenderit Guten Tag mollit anim Stuttgart.</p>
+      </div>
+      <div class="gray-box">
+        <img src="./images/grillkurs_icon.svg"> <br/>
+        <img src="./images/zvezdice.svg"><br/><br/>
+          <p>Wiener Schnitzel amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore et dolore magna Luftballons Ut Turnbeutel nostrud exercitation ullamco .</p>
+      </div>
+      <div class="gray-box">
+          <p>Achtung fur atine indoctum complectitur HugoClub Mate mea meliore denique nominavi id. Ohrwurm expetenda nam an, his ei Reise euismod assentior.</p>
+      </div>
+  </div></div>
     <footer>
-      <main class="footer-line-text">
-        <div class="footer-line-text-div">
-          <ul>
-            <li>
-              <img class="icons" src="./images/location-dot-solid.svg" />
-              Klauprechtstraße 25
-            </li>
-            <li>76137 Karlsruhe, Germany</li>
-            <li>
-              <img class="icons" src="./images/phone-solid.svg" /> +49 721
-              358060
-            </li>
-            <li>
-              <img class="icons" src="./images/envelope-regular.svg" />
-              info@partyservice-brath.de
-            </li>
-          </ul>
-        </div>
-        <div class="footer-line-text-div">
-          <img class="inserted-img" src="./images/logo.svg" />
-        </div>
-        <div class="footer-line-text-div">Besuchen Sie uns auf:</div>
-        <div class="footer-line-text-div2">
-          <img class="inserted-img" src="./images/insta.png" />
-        </div>
-      </main>
+        <div class="footer-contact"><ul>
+          <li>
+            <img class="icons" src="./images/location-dot-solid.svg" />
+            Klauprechtstraße 25
+          </li>
+          <li>76137 Karlsruhe, Germany</li>
+          <li>
+            <img class="icons" src="./images/phone-solid.svg" /> +49 721
+            358060
+          </li>
+          <li>
+            <img class="icons" src="./images/envelope-regular.svg" />
+            info@partyservice-brath.de
+          </li>
+        </ul></div>
+        <div class="footer-logo">  <img class="inserted-img" src="./images/logo.svg" /></div>
+        <div class="footer-social"><div class="footer-social-text">Besuchen Sie uns auf:</div> <div><img class="inserted-img" src="./images/insta.png" /></div></div>
+
+
+   
     </footer>
     <div class="footer-line">
-      <div class="left-text">
-        © 2020 by Metzgerei Heiko Brath GmbH, Deutschland
-      </div>
-      <div class="right-text">Code and design by <u>StudioPresent</u></div>
+      <div>© 2020 by Metzgerei Heiko Brath GmbH, Deutschland</div>
+      <div>Code and design by <u>StudioPresent</u></div>
     </div>
   </body>
 </html>
