@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -149,7 +150,7 @@
             <li>• ausgezeichneter Metzger</li>
             <li>• 1 Tag</li>
             <li>• lernen Sie die Kunst des Grillens</li>
-          </ul>
+          </ul><br/><br/>
           <button class="white-button">Grillkurs</button>
         </div>
       </div>
@@ -159,6 +160,7 @@
     </div>
     <div class="black-block">
       <div class="center-text">
+        <div class="handwerk-text">
         <h1>Das Handwerk</h1>
         <br /><br />
         <h2>alles über unsere Hausgemachte Produkte</h2>
@@ -178,12 +180,13 @@
         <img class="inserted-img" src="./images/vonal 1.png" />
         <div class="gallery">
         <div class="thumbnails">
-          <img class="thumbnail" src="./images/wurst.png" alt="Thumbnail 1" />
-          <img class="thumbnail" src="./images/hanchen.png" alt="Thumbnail 2" />
-          <img class="thumbnail" src="./images/schwein.png" alt="Thumbnail 3" />
-          <img class="thumbnail" src="./images/rind.png" alt="Thumbnail r" />
+          <img class="thumbnail-2" src="./images/wurst.png" alt="Thumbnail 1" />
+          <img class="thumbnail-2" src="./images/hanchen.png" alt="Thumbnail 2" />
+          <img class="thumbnail-2" src="./images/schwein.png" alt="Thumbnail 3" />
+          <img class="thumbnail-2" src="./images/rind.png" alt="Thumbnail r" />
         </div>
         </div>
+        </div>  
       </div>
     </div>
     <div class="split-container">
@@ -234,17 +237,17 @@
         <div class="ausz-block"><div class="ausz-text"><h2>Auszeichnungen</h2></div>
         <div class="gallery">
           <div class="thumbnails">
-            <div class="thumbnail"><img class="inserted-img" src="./images/nagrada1.png" />  <br />
+            <div class="thumbnail-2"><img class="inserted-img" src="./images/nagrada1.png" />  <br />
               <small class="small"
                 >Tollit argumentum<br />genau Saepe lobortis</small
               ></div>
-            <div class="thumbnail"><img class="inserted-img" src="./images/nagrada2.png" />
+            <div class="thumbnail-2"><img class="inserted-img" src="./images/nagrada2.png" />
               <br />
               <small class="small">Schneewittchen<br />denique</small></div>
-            <div class="thumbnail"><img class="inserted-img" src="./images/nagrada3.png" /> <br />
+            <div class="thumbnail-2"><img class="inserted-img" src="./images/nagrada3.png" /> <br />
               <small class="small">Grimms Märchen<br />expetenda</small>
             </div>
-            <div class="thumbnail"><img class="inserted-img" src="./images/nagrada4.png" /> <br />
+            <div class="thumbnail-2"><img class="inserted-img" src="./images/nagrada4.png" /> <br />
               <small class="small">Mettwurst mei<br />ullum gloriatur.</small>
             </div>
           </div>
@@ -258,10 +261,39 @@
         <br /><br />
         <h1>Was die Leute über uns sagen</h1>
         <br /><br />
-        <button class="redbutton">Das Handwerk</button>
       </div>
     </div>
-    <div class="black-block">  <div class="gray-container">
+    <div class="black-block">
+      <section id="slider" class="pt-5">
+        <div class="container">
+          <div class="slider">
+            <div class="owl-carousel">
+              <div class="slider-card">
+                <div class="d-flex justify-content-center align-items-center mb-4">
+                  <img src="./images/dry3.svg">
+                </div>
+                <p>Wiener Schnitzel amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore et dolore magna Luftballons Ut Turnbeutel nostrud exercitation ullamco .</p>
+              </div>
+              <div class="slider-card">
+                <div class="d-flex justify-content-center align-items-center mb-4">
+                  <img src="./images/dry3.svg">
+                </div>
+                <p>Wiener Schnitzel amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore et dolore magna Luftballons Ut Turnbeutel nostrud exercitation ullamco .</p>
+              </div>
+              <div class="slider-card">
+                <div class="d-flex justify-content-center align-items-center mb-4">
+                  <img src="./images/dry3.svg">
+                </div>
+                <p>Wiener Schnitzel amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore et dolore magna Luftballons Ut Turnbeutel nostrud exercitation ullamco .</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script src="slide.js"></script>
+      <script src="owl.carousel.min.js"></script>
+      
+      <!--  <div class="gray-container">
       <div class="gray-box">
           <p>Sprechen Sie deutsch aliquip ex ea commodo consequat. Wiener Schnitzel aute irure dolor in reprehenderit Guten Tag mollit anim Stuttgart.</p>
       </div>
@@ -273,7 +305,11 @@
       <div class="gray-box">
           <p>Achtung fur atine indoctum complectitur HugoClub Mate mea meliore denique nominavi id. Ohrwurm expetenda nam an, his ei Reise euismod assentior.</p>
       </div>
-  </div></div>
+  </div>-->
+
+  <button class="redbutton">Alle Berichte</button>
+</div>
+
     <footer>
         <div class="footer-contact"><ul>
           <li>
@@ -291,7 +327,7 @@
           </li>
         </ul></div>
         <div class="footer-logo">  <img class="inserted-img" src="./images/logo.svg" /></div>
-        <div class="footer-social"><div class="footer-social-text">Besuchen Sie uns auf:</div> <div><img class="inserted-img" src="./images/insta.png" /></div></div>
+        <div class="footer-social"><div class="footer-social-text">Besuchen Sie uns auf: </div> <div><img class="inserted-img" src="./images/insta.png" /></div></div>
 
 
    
