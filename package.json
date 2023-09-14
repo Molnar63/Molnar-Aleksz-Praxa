@@ -1,9 +1,18 @@
 {
   "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "gulp": "^4.0.2",
     "gulp-sass": "^5.1.0",
-    "node-sass": "^9.0.0"
+    "node-sass": "^9.0.0",
+    "sass": "^1.67.0"
   },
-  "dependencies": {
-    "gulp": "^4.0.2"
-  }
+  "name": "molnar-aleksz-praxa",
+  "version": "1.0.0",
+  "description": "praksa",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
